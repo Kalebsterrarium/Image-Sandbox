@@ -20,14 +20,15 @@ println(displayWidth);
  rectYPic1 = displayHeight*1/6;
  rectWidthPic1 = displayWidth*9/20;
  rectHeightPic1 = displayHeight*9/20;
- pic1ImageWidthRatio = 2560/2560 ;  //Longest side is 1
+ pic1ImageWidthRatio = 2560.0/2560 ;  //Longest side is 1
  pic1ImageHeightRatio = 1707/2560 ; //Shorter side is <1
  picX1 = rectXPic1;
  picY1 = rectYPic1; 
  picWidth1 =rectWidthPic1*pic1ImageWidthRatio ; 
  picHeight1 =rectHeightPic1*pic1ImageHeightRatio  ;
+ if (picWidth1 > rectWidthPic1) println("Image 1 display width issues");
  //Image Layout 
  rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
  //
  //Printing Images
- image(pic1, rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1 );
+ image(pic1, picX1, picY1, picWidth1, picHeight1 );
